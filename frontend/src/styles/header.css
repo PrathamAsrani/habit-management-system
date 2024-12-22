@@ -1,0 +1,80 @@
+/* Navbar container styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0077b5;
+  color: white;
+  padding: 0.5rem 1rem;
+}
+
+/* Logo styling */
+.navbar .logo {
+  font-size: 1.5rem;
+}
+
+/* Menu container styling */
+.navbar .menu {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+}
+
+/* Menu links styling */
+.navbar .menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.navbar .menu a:hover {
+  text-decoration: underline;
+  transform: scale(1.2);
+}
+
+/* Dropdown container styling */
+.navbar .menu .dropdown {
+  position: relative;
+  margin-right: 2.5vw;
+}
+
+/* Dropdown menu styling */
+.navbar .menu .dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #ffffff;  /* White background */
+  color: #0077b5;  /* Blue text color for visibility */
+  min-width: 150px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 4px;
+}
+
+/* Dropdown menu links styling */
+.navbar .menu .dropdown-content a {
+  color: #0077b5;  /* Blue text color */
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  display: block;
+  background-color: #ffffff;  /* White background */
+  border-bottom: 1px solid #ddd;  /* Add a border between links */
+}
+
+/* Hover effect for dropdown menu links */
+.navbar .menu .dropdown-content a:hover {
+  background-color: #f1f1f1;  /* Light gray background on hover */
+  color: #0077b5;  /* Keep the text color same on hover */
+}
+
+/* Show dropdown when hovered */
+.navbar .menu .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* User icon styling */
+.navbar .menu .user-icon {
+  cursor: pointer;
+  margin-left: 1rem;
+  font-size: 1.5rem;
+}

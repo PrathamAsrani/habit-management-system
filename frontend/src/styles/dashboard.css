@@ -1,0 +1,257 @@
+.dashboard {
+    padding: 2rem 1rem;
+    margin: 0 auto;
+    max-width: 90%;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.dashboard-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+    letter-spacing: 0.05em;
+}
+
+.habit-list {
+    margin: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.no-habits-message {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #888;
+    margin-top: 2rem;
+    font-style: italic;
+}
+
+.habit-header {
+    font-size: 1.2rem;
+    padding: 1rem;
+    background-color: #eff0f4;
+    color: #444;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    letter-spacing: 0.05em;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.header-item {
+    text-align: center;
+    color: #666;
+    letter-spacing: 0.05em;
+}
+
+.habit-card {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.habit-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.habit-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+    padding: 0 0.5rem;
+    text-transform: capitalize;
+}
+
+.habit-frequency,
+.habit-status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.habit-status.status-active {
+    color: #4caf50;
+    font-weight: bold;
+}
+
+.habit-status.status-inactive {
+    color: #f44336;
+    font-weight: bold;
+}
+
+.habit-progress {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.progress-bar {
+    position: relative;
+    width: 50%;
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.progress-filled {
+    height: 100%;
+    background-color: #4caf50;
+    transition: width 0.4s ease-in-out;
+}
+
+.progress-percentage {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+    margin-left: 0.5rem;
+    text-align: right;
+}
+
+.done-button {
+    padding: 0.3rem 0.8rem;
+    margin-left: 2rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.done-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.done-button:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
+.add-habit-button,
+.recommend-habit-button {
+    position: absolute;
+    top: 1rem;
+    padding: 0.6rem 1.2rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-habit-button {
+    right: 1rem;
+}
+
+.recommend-habit-button {
+    right: 12rem;
+}
+
+.add-habit-button:hover,
+.recommend-habit-button:hover {
+    background-color: #0056b3;
+}
+
+.load-more-button {
+    display: block;
+    margin: 2rem auto;
+    padding: 0.8rem 2rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.load-more-button:hover {
+    background-color: #0056b3;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .habit-header,
+    .habit-card {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .habit-title,
+    .habit-frequency,
+    .habit-status {
+        font-size: 1rem;
+    }
+
+    .add-habit-button,
+    .recommend-habit-button {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+        width: 23vw;
+        top: 2rem;
+    }
+
+    .add-habit-button {
+        right: .9rem;
+    }
+    
+    .recommend-habit-button {
+        right: 15.5rem;
+    }
+
+    .done-button{
+        width: 20vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .dashboard-title {
+        font-size: 1.5rem;
+    }
+
+    .habit-header,
+    .habit-card {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .habit-title,
+    .habit-frequency,
+    .habit-status {
+        font-size: 0.9rem;
+    }
+
+    .add-habit-button,
+    .recommend-habit-button {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    .done-button {
+        margin-left: 1rem;
+    }
+}

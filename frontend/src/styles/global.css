@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#webpage{
+    display: flex;
+    height: 100vh;
+}
+
+body{
+    background-color: #f4f7fa;
+}
+
+button {
+    width: 10vw;
+    margin: 0 .2vw;
+}
